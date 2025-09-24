@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Fader Options</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="number"], textarea {
+      width: 300px;
+      padding: 5px;
+    }
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    #status {
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Fader Options</h1>
+
+  <div class="form-group">
+    <label for="scroll-count">Scroll Count Threshold:</label>
+    <input type="number" id="scroll-count" name="scroll-count" min="1" value="10">
+  </div>
+
+  <div class="form-group">
+    <label for="websites">Websites (one per line):</label>
+    <textarea id="websites" name="websites" rows="5" placeholder="e.g., reddit.com&#10;x.com"></textarea>
+  </div>
+
+  <button id="save-button">Save</button>
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
