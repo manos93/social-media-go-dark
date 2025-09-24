@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Website Fader",
-  "version": "1.1",
+  "version": "1.2",
   "description": "A Chrome extension that makes websites gradually disappear as you scroll.",
   "permissions": [
     "storage"
