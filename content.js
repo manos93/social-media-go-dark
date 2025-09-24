@@ -1,6 +1,7 @@
 let scrollCount = 0;
 let scrollTimeout;
 let lastScrollTop = 0;
+let currentHref = document.location.href;
 
 chrome.storage.sync.get(['scrollCount', 'websites', 'fadeSpeed', 'reverseFading'], (result) => {
   const currentHostname = window.location.hostname;
@@ -10,6 +11,22 @@ chrome.storage.sync.get(['scrollCount', 'websites', 'fadeSpeed', 'reverseFading'
   const reverseFading = result.reverseFading || false;
 
   if (targetWebsites.some(website => currentHostname.includes(website))) {
+    // Reset function
+    const resetFading = () => {
+      scrollCount = 0;
+      lastScrollTop = 0;
+      document.body.style.opacity = 1;
+    };
+
+    // Listen for URL changes (for SPAs)
+    new MutationObserver(() => {
+      if (document.location.href !== currentHref) {
+        currentHref = document.location.href;
+        resetFading();
+      }
+    }).observe(document.body, { childList: true, subtree: true });
+
+
     window.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {

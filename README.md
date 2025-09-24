@@ -30,6 +30,10 @@ The Website Fader extension should now be installed and visible in your list of 
 
 ## Changelog
 
+### Version 1.2
+
+*   **SPA Navigation Fix:** The fading effect now resets automatically when navigating within a single-page application, preventing the fade from persisting across different views.
+
 ### Version 1.1
 
 *   **Configurable Fading Speed:** You can now control how quickly the website fades out after the scroll threshold is met.
