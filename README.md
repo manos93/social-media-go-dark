@@ -27,3 +27,10 @@ The Website Fader extension should now be installed and visible in your list of 
 *   **Website Whitelist:** The extension will only run on the websites you specify in the options.
 *   **Gradual Fade-out:** The website content will slowly become more transparent with each scroll after the threshold is reached, eventually disappearing completely.
 *   **Simple UI:** A clean and simple options page makes it easy to configure the extension to your liking.
+
+## Changelog
+
+### Version 1.1
+
+*   **Configurable Fading Speed:** You can now control how quickly the website fades out after the scroll threshold is met.
+*   **Reverse Fading:** Added an option to reverse the fading effect when you scroll back up the page.
